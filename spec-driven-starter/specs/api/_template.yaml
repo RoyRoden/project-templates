@@ -1,0 +1,38 @@
+openapi: "3.1.0"
+info:
+  title: "[Project Name] API"
+  version: "0.1.0"
+
+paths:
+  /example:
+    post:
+      summary: "[One-line description]"
+      operationId: "[operationId]"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/[RequestSchema]"
+      responses:
+        "201":
+          description: "[Created resource description]"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/[ResponseSchema]"
+        "400":
+          description: "Invalid input"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+components:
+  schemas:
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string

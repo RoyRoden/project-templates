@@ -1,0 +1,36 @@
+# [ecosystem-name]-shared — Claude Code Context
+
+## Purpose
+
+Single source of truth for everything shared across the [EcosystemName] ecosystem.
+Contains no runnable code — only specifications, schemas, and documentation.
+
+## Repo map
+
+```
+[ecosystem-name]-shared/
+├── protocols/      Wire protocol schemas (if applicable)
+├── data-format/    Data exchange format specifications (if applicable)
+├── shaders/        Shared rendering constants and math (if applicable)
+└── docs/           Domain knowledge, architecture, ADRs
+    └── adr/        Architecture Decision Records
+```
+
+## Consumption by platform
+
+| Platform | Language | How to consume |
+|----------|----------|----------------|
+| [App 1] | [Language] | [How] |
+| [App 2] | [Language] | [How] |
+
+## Adding content
+
+- **New protocol message**: add schema, bump version in `protocols/README.md`,
+  update all platform implementations.
+- **Architectural decision**: add ADR to `docs/adr/` using `000-template.md`.
+- **Discovered inconsistency**: add entry to `docs/known-inconsistencies.md`.
+
+## Protocol versioning
+
+All wire messages carry a `version` field (semver). Breaking changes increment
+the major version. Current version: `1.0.0`.

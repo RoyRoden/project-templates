@@ -1,0 +1,17 @@
+name: Spec Check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  spec-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check required spec directories
+        run: bash scripts/check-specs.sh
+
+      - name: Lint placeholder (replace with project test command)
+        run: echo "Add your lint/test command here"
