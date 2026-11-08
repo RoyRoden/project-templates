@@ -10,6 +10,8 @@ across all Roy Rodenhauser project ecosystems.
 |----------|---------|
 | [`project-group-template/`](project-group-template/) | Any new multi-app project group |
 | [`spec-driven-starter/`](spec-driven-starter/) | Adding a spec-first workflow to a new or existing repo |
+| [`uk-ltd-admin-template/`](uk-ltd-admin-template/) | A small UK LTD's admin repo: deadlines, ledger, IP register (the company repos made from it stay off GitHub) |
+| [`workshop-lecture-template/`](workshop-lecture-template/) | A one-off workshop, lecture or teaching session |
 
 ## Convention
 
