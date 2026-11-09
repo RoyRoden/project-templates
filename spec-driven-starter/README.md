@@ -8,7 +8,8 @@ The CI and scripts use bash (no language runtime required).
 
 ## How to adopt in an existing repo
 
-1. Copy `specs/`, `templates/`, `scripts/`, and `CLAUDE.md` into the target repo.
+1. Copy `specs/` (including `specs/STATUS.md`), `templates/`, `scripts/`, `BACKLOG.md` and `CLAUDE.md` into the
+   target repo.
 2. Copy `.github/workflows/spec-check.yml` if the repo uses GitHub Actions.
 3. Replace the example files in `specs/` with real specs for your first feature.
 4. Commit. Claude Code will now follow the operating rules in `CLAUDE.md`.
@@ -22,6 +23,7 @@ The CI and scripts use bash (no language runtime required).
 4. templates/implementation-plan   Plan the implementation with Claude
 5. templates/task-checklist        Track progress
 6. Implement incrementally
+7. specs/STATUS.md                 Update Now / Next / Recently decided and the spec's status
 ```
 
 ## Scripts

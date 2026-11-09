@@ -19,6 +19,16 @@ and any change whose intent is not obvious from the task description alone.
 6. Only implement after approval.
 7. Keep tests aligned with acceptance criteria as implementation proceeds.
 
+## Status and end of session
+
+- `specs/STATUS.md` is where the project stands: **Now**, **Next**, **Recently decided**, the spec table and
+  open items. Read it at the start of a session.
+- Before ending a session in which something was built, decided, or changed direction, update `STATUS.md`
+  (Now / Next / Recently decided, the spec's status line) and commit. Propose the update; the user confirms.
+- A decision that changes a spec goes in that spec; `Recently decided` only points to it.
+- Respect the WIP limit in `STATUS.md`: at the limit, test what's built before building more.
+- Unspecced ideas and one-session tasks go in `BACKLOG.md`, in priority order, each with a "done when".
+
 ## Hard constraints
 
 - Never invent field names, endpoint paths, event names, or response shapes not present in specs.
@@ -38,6 +48,8 @@ Copy the relevant template:
 | Acceptance criteria | `specs/acceptance/_template.md` |
 | Implementation plan | `templates/implementation-plan.md` |
 | Task checklist | `templates/task-checklist.md` |
+| Project status | `specs/STATUS.md` (one per project, kept up to date) |
+| Backlog | `BACKLOG.md` (one per project) |
 
 ## What lives where
 
@@ -45,7 +57,9 @@ Copy the relevant template:
 specs/product/      Feature intent, scope, behavior — the "why" and "what"
 specs/api/          HTTP API contracts (OpenAPI)
 specs/schemas/      Data shape contracts (JSON Schema)
-specs/acceptance/   Observable acceptance criteria
+specs/acceptance/   Observable acceptance criteria, tagged [auto] / [visual] / [hands-on]
+specs/STATUS.md     Now / Next / Recently decided, spec table, open items
+BACKLOG.md          Unspecced ideas and one-session tasks, in priority order
 templates/          Reusable document templates
 scripts/            Local spec tooling
 ```

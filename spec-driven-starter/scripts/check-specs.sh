@@ -20,6 +20,13 @@ for dir in "${REQUIRED_DIRS[@]}"; do
   fi
 done
 
+if [ -f specs/STATUS.md ]; then
+  echo "OK:      specs/STATUS.md"
+else
+  echo "MISSING: specs/STATUS.md (copy it from spec-driven-starter)"
+  ERRORS=$((ERRORS + 1))
+fi
+
 for f in specs/schemas/*.json; do
   [ -e "$f" ] || continue
   if python3 -c "import json, sys; json.load(open('$f'))" 2>/dev/null; then

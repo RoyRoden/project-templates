@@ -2,9 +2,16 @@
 
 **Spec**: `specs/product/[feature-name].md`
 
+Start each item with how it is checked:
+- `[auto]`: Claude proves it with a test or script.
+- `[visual]`: Claude checks a render or screenshot.
+- `[hands-on]`: only a person can judge it (hardware, feel, taste).
+
+When ticking an item, note who checked it, when, and how, e.g. `(Claude 2026-11-09, tests/foo.sh)`.
+
 ## Happy path
 
-- [ ] Given [context], when [action], then [observable outcome].
+- [ ] [auto] Given [context], when [action], then [observable outcome].
 
 ## Edge cases
 
@@ -12,7 +19,7 @@
 
 ## Error cases
 
-- [ ] Given [invalid input], when [action], then [error response with specific shape/code].
+- [ ] [auto] Given [invalid input], when [action], then [error response with specific shape/code].
 
 ## Non-functional
 
